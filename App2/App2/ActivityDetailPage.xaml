@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="App2.ActivityDetailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" Clicked="OnDeleteActivity"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Padding="10">
+        <Label  Text="{Binding Name, StringFormat='Activity: {0:N}'}" FontSize="Medium" FontAttributes="Bold"/>
+        <BoxView HeightRequest="1" Color="#ae9fce" />
+        <Label Text="{Binding Category, StringFormat='Category: {0:N}'}" FontSize="Medium" FontAttributes="Bold"/>
+        <BoxView HeightRequest="1" Color="#ae9fce" />
+        <Label x:Name="totalTimeSpent" FontSize="Medium" FontAttributes="Bold"/>
+        <BoxView HeightRequest="1" Color="#ae9fce" />
+        <Label x:Name="unFinishedWorks" FontSize="Medium" FontAttributes="Bold"/>
+        <BoxView HeightRequest="1" Color="#ae9fce" />
+        <Label x:Name="finishedWorks" FontSize="Medium" FontAttributes="Bold"/>
+        <BoxView HeightRequest="1" Color="#ae9fce" />
+        <Label Text="Use of activities:" FontSize="Medium" FontAttributes="Bold" Margin="0,20,0,0"/>
+        <forms:ChartView x:Name="Chart1" HeightRequest="100" />
+  
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.AddWork">
+    <ScrollView>
+        <StackLayout Margin="10,0,10,0">
+            <Label Text="Choose activity" FontSize="Medium" FontAttributes="Bold"/>
+            <Button x:Name="activButton" Text="Activity" Clicked="OnActivityChoice" BackgroundColor="#2196f3" TextColor="White" BorderRadius="12" WidthRequest="200" HorizontalOptions="Center"/>
+            <Label Text="Choose day:" FontSize="Medium" FontAttributes="Bold"/>
+            <DatePicker x:Name="workDate" HorizontalOptions="Center"/>
+            <Label Text="Choose duration:" FontSize="Medium" FontAttributes="Bold"/>
+
+            <Label Text="Hours"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="-" Clicked="OnSubtractHour" BackgroundColor="#2196f3" WidthRequest="40" HeightRequest="40" TextColor="White" BorderRadius="10"/>
+                <Entry x:Name="entryHours" Keyboard="Numeric" Text="0" WidthRequest="30"/>
+                <Button Text="+" Clicked="OnAddHour" BackgroundColor="#2196f3" WidthRequest="40" HeightRequest="40" TextColor="White" BorderRadius="10"/>
+            </StackLayout>
+
+            <Label Text="Minutes" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="-" Clicked="OnSubtractMinute" BackgroundColor="#2196f3" WidthRequest="40" HeightRequest="40" TextColor="White" BorderRadius="10"/>
+                <Entry x:Name="entryMinutes" Keyboard="Numeric" Text="0" WidthRequest="30" />
+                <Button Text="+" Clicked="OnAddMinute" BackgroundColor="#2196f3" WidthRequest="40" HeightRequest="40" TextColor="White" BorderRadius="10"/>
+            </StackLayout>
+
+
+            <Label Text="Comment:" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry x:Name="workComment" Placeholder="Comment..."/>
+
+            <Button Text="Save" Clicked="OnSaveNewWork" BackgroundColor="#2196f3" TextColor="White" BorderRadius="12" WidthRequest="200" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

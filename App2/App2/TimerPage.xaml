@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.TimerPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button x:Name="timerButton" Clicked="OnStartPauseTimer" Text="Start Clock" WidthRequest="300" BackgroundColor="#2196f3" TextColor="White" BorderRadius="12"/>
+        <Label x:Name="timertxt" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        <Label x:Name="workDuration" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+        <Button x:Name="backButton" Clicked="OnGoBackButton" Text="Back" WidthRequest="300" BackgroundColor="#2196f3" TextColor="White" BorderRadius="12"/>
+    </StackLayout>
+ 
+</ContentPage>

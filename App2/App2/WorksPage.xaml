@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.WorksPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="OnAddWork"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Padding="10">
+        <Label Text="Choose day:" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <DatePicker x:Name="workDate" FontSize="Medium" />
+            <Button x:Name="LoadButton" Text="Ok" Clicked="OnLoadWorkList" BackgroundColor="#2196f3" TextColor="White" BorderRadius="12"/>
+        </StackLayout>
+
+        <Label x:Name="worksToDo" FontSize="Medium" FontAttributes="Bold"/>
+
+        <ListView x:Name="worksListView" ItemSelected="OnWorkSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding ImgSrc}" Text="{Binding ActivityName}" Detail="{Binding Progression}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
+
+
